@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>イベントリンク集</title>
+	<style>
+		/* --- [カスタマイズ領域：色や見た目の設定] --- */
+		:root {
+			/* 好きな紫色のカラーコードを設定してください */
+			--primary-color: #9370db;      /* ボタンの背景色（例: BlueViolet） */
+			--hover-color: #483d8b;        /* ボタンを押し込んだとき・ホバー時の少し濃い紫色 */
+			--text-color: #ffffff;         /* ボタンの文字色（基本は白がおすすめ） */
+            
+			--bg-color: #f8f9fa;           /* サイト全体の背景色（薄いグレー） */
+			--content-bg: #ffffff;         /* コンテンツエリアの背景色（白） */
+		}
+
+		/* --- [全体のレイアウト] --- */
+		body {
+			font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', sans-serif;
+			background-color: var(--bg-color);
+			margin: 0;
+			padding: 0;
+			color: #333;
+			display: flex;
+			justify-content: center;
+		}
+
+		/* 画面中央に収まるコンテナ（スマホサイズ） */
+		.container {
+			width: 100%;
+			max-width: 480px; /* スマホで見やすい横幅 */
+			background-color: var(--content-bg);
+			min-height: 100vh;
+			box-sizing: border-box;
+			padding: 40px 24px;
+			box-shadow: 0 0 20px rgba(0,0,0,0.05);
+		}
+
+		/* --- [画像セクション] --- */
+		.image-area {
+			width: 100%;
+			margin-bottom: 25px;
+			text-align: center;
+		}
+		.main-image {
+			width: 100%;
+			height: auto;
+			border-radius: 12px; /* 画像の角も少し丸くします */
+			object-fit: cover;
+			box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+		}
+
+		/* タイトル・テキスト */
+		h1 {
+			font-size: 22px;
+			text-align: center;
+			margin: 0 0 10px 0;
+			color: #222;
+		}
+		.description {
+			font-size: 14px;
+			text-align: center;
+			line-height: 1.6;
+			color: #666;
+			margin-bottom: 30px;
+		}
+
+		/* --- [リンクボタン] --- */
+		.links-list {
+			display: flex;
+			flex-direction: column;
+			gap: 16px; /* ボタン同士の間隔 */
+		}
+		.event-button {
+			display: block;
+			background-color: var(--primary-color);
+			color: var(--text-color);
+			text-decoration: none;
+			text-align: center;
+			padding: 16px 20px;
+			font-size: 16px;
+			font-weight: bold;
+			border-radius: 12px; /* ★ここ数値を大きくするともっと丸くなります（50pxでカプセル型） */
+			box-shadow: 0 4px 10px rgba(138, 43, 226, 0.2); /* 紫色の軽い影 */
+			transition: all 0.2s ease;
+		}
+
+		/* タップ・ホバー時の動き */
+		.event-button:hover, .event-button:active {
+			background-color: var(--hover-color);
+			transform: translateY(-2px);
+			box-shadow: 0 6px 14px rgba(138, 43, 226, 0.3);
+		}
+	</style>
+</head>
+<body>
+
+	<div class="container">
+
+		<div class="image-area">
+			<img src="yukata.png" alt="イベントメイン画像" class="main-image">
+		</div>
+
+		<h1>イベント・サークル名</h1>
+		<p class="description">
+			ここにイベントの概要や、簡単な紹介文テキストを入れることができます。
+		</p>
+
+		<div class="links-list">
+			<a href="https://x.com/chibitann723" target="_blank" rel="noopener noreferrer" class="event-button">
+				Xはこちら
+			</a>
+            
+			<a href="https://example.com/event-site" target="_blank" rel="noopener noreferrer" class="event-button">
+				特設イベントサイトを見る
+			</a>
+
+			<a href="https://example.com/ticket" target="_blank" rel="noopener noreferrer" class="event-button">
+				チケット予約・お申し込み
+			</a>
+		</div>
+
+	</div>
+
+</body>
+</html>
