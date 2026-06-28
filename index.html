@@ -7,10 +7,14 @@
 	<style>
 		/* --- [カスタマイズ領域：色や見た目の設定] --- */
 		:root {
-			/* 好きな紫色のカラーコードを設定してください */
+			/* 好きなカラーコードを設定してください */
 			--primary-color: #9370db;      /* ボタンの背景色（例: BlueViolet） */
 			--hover-color: #483d8b;        /* ボタンを押し込んだとき・ホバー時の少し濃い紫色 */
 			--text-color: #ffffff;         /* ボタンの文字色（基本は白がおすすめ） */
+            
+			--sub-color: #ffc0cb;      /* ボタンの背景色（例: BlueViolet） */
+			--sub-hover-color: #db7093;        /* ボタンを押し込んだとき・ホバー時の少し濃い紫色 */
+			--sub-text-color: #ffffff;         /* ボタンの文字色（基本は白がおすすめ） */
             
 			--bg-color: #f8f9fa;           /* サイト全体の背景色（薄いグレー） */
 			--content-bg: #ffffff;         /* コンテンツエリアの背景色（白） */
@@ -93,6 +97,15 @@
 			transform: translateY(-2px);
 			box-shadow: 0 6px 14px rgba(138, 43, 226, 0.3);
 		}
+
+		/* ★2種類目のボタン（色違い）の設定を追加 */
+        .event-button.sub-style {
+            background-color: var(--sub-color);
+            box-shadow: 0 4px 10px rgba(208, 60, 208, 0.2); /* 2種類目の色に合わせた影 */
+        }
+        .event-button.sub-style:hover, .event-button.sub-style:active {
+            background-color: var(--sub-hover-color);
+        }
 	</style>
 </head>
 <body>
@@ -120,15 +133,15 @@
 				YouTube
 			</a>
 
-			<a href="https://leafshade.stores.jp/?category_id=6a3bbc9fde31fb7391d9b733" target="_blank" rel="noopener noreferrer" class="event-button">
+			<a href="https://leafshade.stores.jp/?category_id=6a3bbc9fde31fb7391d9b733" target="_blank" rel="noopener noreferrer" class="event-button sub-style">
 				Crossing Dream 購入サイト
 			</a>
             
-			<a href="https://leafshade.stores.jp/?category_id=6a3bbc8675716e4f5b4de090" target="_blank" rel="noopener noreferrer" class="event-button">
+			<a href="https://leafshade.stores.jp/?category_id=6a3bbc8675716e4f5b4de090" target="_blank" rel="noopener noreferrer" class="event-button sub-style">
 				学校deバーチャルLIVE！Vの夏休み 購入サイト
 			</a>
 
-			<a href="https://livehouse-ys.com/events/37364" target="_blank" rel="noopener noreferrer" class="event-button">
+			<a href="https://livehouse-ys.com/events/37364" target="_blank" rel="noopener noreferrer" class="event-button sub-style">
 				Vコレライブvol.2 アーカイブ
 			</a>
 		</div>
